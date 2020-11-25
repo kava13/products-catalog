@@ -1,0 +1,33 @@
+.MuiTreeView-root {
+  padding: 16px !important;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.MuiTreeView-root {
+  width: 203px;
+}
+
+.MuiTypography-body1 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
+  font-family: Inter, sans-serif !important;
+}
+
+.MuiTreeItem-content {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+  -ms-flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
+  margin-bottom: 8px;
+}
+
+.MuiTreeItem-content {
+  text-align: left;
+}
+
+.MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .MuiTreeItem-label {
+  font-weight: bold !important;
+}
+/*# sourceMappingURL=sections.css.map */

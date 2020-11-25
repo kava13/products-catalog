@@ -1,0 +1,128 @@
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 23px;
+  padding-bottom: 3px;
+}
+
+.header-block {
+  padding-top: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.header-logo {
+  margin-right: 98px;
+}
+
+.header-catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.header-menu {
+  width: 12px;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  position: relative;
+  margin-right: 6px;
+}
+
+.header-menu::after {
+  position: absolute;
+  content: "";
+  top: 4px;
+  display: block;
+  content: fff;
+  width: 12px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.header-menu::before {
+  position: absolute;
+  content: "";
+  bottom: 4px;
+  display: block;
+  content: fff;
+  width: 12px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.header-buttons {
+  text-align: right;
+}
+
+.header-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.header-count {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header-sum {
+  display: block;
+  font-size: 12px;
+}
+
+@media (max-width: 530px) {
+  .header-logo {
+    margin-right: 20px;
+  }
+}
+/*# sourceMappingURL=header.css.map */

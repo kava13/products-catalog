@@ -1,0 +1,44 @@
+*
+    box-sizing: border-box
+
+body
+    font-family: Inter, sans-serif
+
+img
+    max-width: 100%
+
+.container
+    margin: 0 auto
+    max-width: 1380px
+
+.button
+    border: none
+
+button,
+button:active,
+button:focus,
+input
+    outline: none
+
+.main-block
+    display: flex
+    > div
+        &:first-child
+            margin-right: 32px
+
+@media ( max-width: 1200px )
+    .container
+        max-width: 900px
+        width: 95%
+    .section
+        padding: 45px 0px
+@media ( max-width: 768px )
+    .container
+        max-width: 580px
+        width: 90%
+@media ( max-width: 530px )
+    .main-block
+        flex-direction: column
+        > div
+            &:first-child
+                margin-bottom: 20px

@@ -1,0 +1,112 @@
+.products
+    &-block
+        width: 100%
+        text-align: left
+    &-wrapper
+        max-width: 1140px
+        display: flex
+        flex-wrap: wrap
+    &-title
+        margin-top: 0
+        font-size: 32px
+        font-weight: 700
+    &-select
+        margin-bottom: 32px
+        border: none
+        outline: none
+        background: white
+        cursor: pointer
+    &-card
+        width: 202px
+        height: 384px
+        background: #FFFFFF
+        border: 1px solid #E7E7E7
+        box-sizing: border-box
+        border-radius: 4px
+        display: flex
+        justify-content: center
+        padding: 16px 16px 22px 16px
+        margin-right: 32px
+        margin-bottom: 24px
+        &:nth-child(5n)
+            margin-right: 0px
+    &-info
+        text-align: left
+    &-img
+        border: 1px solid
+        width: 170px
+        height: 170px
+        margin-bottom: 8px
+        display: flex
+        justify-content: center
+        align-items: center
+        > img
+            height: 100%
+            object-fit: cover
+    &-name
+        font-size: 12px
+        font-weight: 400
+        height: 48px
+        color: #240D01
+        line-height: 16px
+        margin-bottom: 8px
+    &-weight
+        color: #515751
+        font-size: 10px
+        font-weight: 500
+        margin-bottom: 10px
+        line-height: 16px
+    &-price
+        color: #001605
+        font-size: 18px
+        font-weight: 700
+        line-height: 24px
+        margin-bottom: 8px
+    &-amount
+        color: #515751
+        font-size: 10px
+        font-weight: 500
+        line-height: 16px
+        margin-bottom: 20px
+        > span
+            margin-right: 6px
+    &-dots
+        display: inline-block
+    &-dot
+        margin-right: 2px
+    &-buttons
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-button
+        padding: 4px 6px
+        color: #fafffa
+        font-size: 12px
+        font-weight: 500
+        line-height: 16px
+        border-radius: 4px
+        background-color: #000000
+        border: none
+        cursor: pointer
+    &-check
+        margin-right: 5px
+    &-favorites
+        cursor: pointer
+        background: transparent
+        border: none
+
+@media ( max-width: 1373px )
+    .products
+        &-card
+            &:nth-child(4n)
+                margin-right: 0px
+            &:nth-child(5n)
+                margin-right: 32px
+
+@media ( max-width: 530px )
+    .products
+        &-wrapper
+            justify-content: center
+        &-card
+            &:nth-child(4n)
+                margin-right: 32px
