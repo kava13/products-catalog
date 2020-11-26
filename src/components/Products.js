@@ -77,15 +77,15 @@ class Products extends React.Component {
     const sortedProducts = this.sortProducts(products);
 
     const parent = filterId ? sectionsById[filterId].parent : null;
+    console.log(parent);
 
     return (
       <div className="products-block">
         <h1 className="products-title">
           {filterId ? (
             <span>
-              {sectionsById[parent].name +
-                " " +
-                sectionsById[filterId].name.toLowerCase()}
+              {parent === 0? " " : sectionsById[parent].name}
+              {parent === 0 ? sectionsById[filterId].name : " " + sectionsById[filterId].name.toLowerCase()}
             </span>
           ) : (
             "Все продукты"

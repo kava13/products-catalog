@@ -22,11 +22,13 @@ class FoodCategories extends React.Component {
       <span>
         {" "}
         Все продукты
-        <img
+        { parent? (<img
           className="categories-img"
           src="/data/images/other/arrow-right.png"
-        />{" "}
-        {parent.name}{" "}
+        />) : null}
+        {" "}
+        {parent? parent.name : ''}
+        
         <img
           className="categories-img"
           src="/data/images/other/arrow-right.png"
@@ -48,7 +50,7 @@ class FoodCategories extends React.Component {
             <p className="categories-list">
               {filterId
                 ? this.renderPath(
-                    fullSectionsById[parent],
+                    parent ? fullSectionsById[parent] : null,
                     fullSectionsById[filterId]
                   )
                 : "Все продукты"}{" "}

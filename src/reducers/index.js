@@ -7,7 +7,9 @@ const sections = handleActions(
     [actions.fetchSectionsSuccess](
       state,
       { payload: { sectionsById, allSectionsIds } }
-    ) {
+    ) 
+    {
+      console.log('sss', sectionsById);
       return {
         ...state,
         fullSectionsById: { ...sectionsById },

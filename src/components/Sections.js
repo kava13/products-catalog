@@ -34,13 +34,15 @@ class Sections extends React.Component {
   renderNode = (section) => {
     const { sectionsById } = this.props;
 
+    console.log('section part', section.parts);
+
     return (
       <TreeItem
         key={section.id}
         nodeId={section.id}
         label={section.name}
         onLabelClick={
-          section.parent ? () => this.handleSetFilterId(section.id) : null
+          section.parent || section.id === 1014 || section.id === 1015? () => this.handleSetFilterId(section.id) : null
         }
       >
         {section.parts &&
@@ -54,7 +56,7 @@ class Sections extends React.Component {
   render() {
     const { sections } = this.props;
     const rootNodes = sections.filter((item) => item.parts);
-
+    console.log('rootNodes', rootNodes);
     return (
       <div>
         <TreeView

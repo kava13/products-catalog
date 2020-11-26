@@ -24,11 +24,16 @@ export const fetchData = () => async (dispatch) => {
   const products = productsData.data;
 
   const sectionsById = sections.reduce((acc, item) => {
+    console.log(item)
     let partsOfSection = sections.reduce((acc, elem) => {
       return elem.parent === item.id ? [...acc, elem.id] : [...acc];
     }, []);
 
     partsOfSection = partsOfSection.length === 0 ? undefined : partsOfSection;
+
+    if (partsOfSection === undefined && item.parent === 0) {
+      partsOfSection = [];
+    }
 
     return { ...acc, [item.id]: { ...item, parts: partsOfSection } };
   }, {});
