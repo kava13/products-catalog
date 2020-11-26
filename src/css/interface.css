@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -14,6 +14,7 @@ img {
 .container {
   margin: 0 auto;
   max-width: 1380px;
+  width: 95%;
 }
 
 .button {
@@ -39,7 +40,7 @@ input {
 
 @media (max-width: 1200px) {
   .container {
-    max-width: 900px;
+    max-width: 935px;
     width: 95%;
   }
   .section {
@@ -54,12 +55,12 @@ input {
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 1200px) {
   .main-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .main-block > div:first-child {
     margin-bottom: 20px;

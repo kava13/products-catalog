@@ -49,7 +49,7 @@ class Header extends React.Component {
               </div>
             </div>
             <div className="header-buttons">
-              <button className="header-button header-favorites">
+              <div className="header-button header-favorites">
                 <img
                   src={
                     countFavorites === 0
@@ -58,8 +58,8 @@ class Header extends React.Component {
                   }
                 />
                 <div className="header-count">{countFavorites}</div>
-              </button>
-              <button className="header-button header-basket">
+              </div>
+              <div className="header-button header-basket">
                 <img
                   src={
                     countBasket === 0
@@ -68,8 +68,9 @@ class Header extends React.Component {
                   }
                 />
                 <div className="header-count">{countBasket}</div>
-              </button>
-              <span className="header-sum">{sumBasket} ₽</span>
+                <span className="header-sum">{sumBasket} ₽</span>
+              </div>
+              
             </div>
           </div>
         </div>
