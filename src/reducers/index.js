@@ -50,6 +50,8 @@ const products = handleActions(
     [actions.toggleOnFavoritesState](state, { payload: { id } }) {
       console.log("А вот и дошли досюда", id);
       console.log("А вот и дошли досюда2", state.productsById[id]);
+      const prevStateFavorites = state.fullProductsById[id].on_favorites;
+
       return {
         ...state,
         fullProductsById: {
@@ -57,7 +59,7 @@ const products = handleActions(
           [id]: {
             ...state.fullProductsById[id],
             on_favorites:
-              state.fullProductsById[id].on_favorites === true ? false : true,
+              prevStateFavorites === true ? false : true,
           },
         },
         productsById: {
@@ -65,7 +67,7 @@ const products = handleActions(
           [id]: {
             ...state.productsById[id],
             on_favorites:
-              state.productsById[id].on_favorites === true ? false : true,
+            prevStateFavorites === true ? false : true,
           },
         },
       };
@@ -73,6 +75,7 @@ const products = handleActions(
     [actions.toggleOnBasketState](state, { payload: { id } }) {
       console.log("А вот и дошли досюда", id);
       console.log("А вот и дошли досюда2", state.productsById[id]);
+      const prevStateBasket = state.fullProductsById[id].on_basket;
       return {
         ...state,
         fullProductsById: {
@@ -80,14 +83,14 @@ const products = handleActions(
           [id]: {
             ...state.fullProductsById[id],
             on_basket:
-              state.fullProductsById[id].on_basket === true ? false : true,
+            prevStateBasket === true ? false : true,
           },
         },
         productsById: {
           ...state.productsById,
           [id]: {
             ...state.productsById[id],
-            on_basket: state.productsById[id].on_basket === true ? false : true,
+            on_basket: prevStateBasket === true ? false : true,
           },
         },
       };
